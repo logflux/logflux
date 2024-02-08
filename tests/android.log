@@ -1,0 +1,30 @@
+12-17 19:31:36.263 1795 1825 I PowerManager_screenOn: DisplayPowerStatesetColorFadeLevel: level=1.0
+12-17 19:31:36.263 5224 5283 I SendBroadcastPermission: action:android.com.huawei.bone.NOTIFY_SPORT_DATA, mPermissionType:0
+12-17 19:31:36.264 1795 1825 D DisplayPowerController: Animating brightness: target=21, rate=40
+12-17 19:31:36.264 1795 1825 I PowerManager_screenOn: DisplayPowerController updatePowerState mPendingRequestLocked=policy=BRIGHT, useProximitySensor=true, useProximitySensorbyPhone=true, screenBrightness=33, screenAutoBrightnessAdjustment=0.0, brightnessSetByUser=true, useAutoBrightness=true, blockScreenOn=false, lowPowerMode=false, boostScreenBrightness=false, dozeScreenBrightness=-1, dozeScreenState=UNKNOWN, useTwilight=false, useSmartBacklight=true, brightnessWaitMode=false, brightnessWaitRet=true, screenAutoBrightness=-1, userId=0
+12-17 19:31:36.264 1795 2750 I PowerManager_screenOn: DisplayPowerState Updating screen state: state=ON, backlight=823
+12-17 19:31:36.264 1795 2750 I HwLightsService: back light level before map = 823
+12-17 19:31:36.264 1795 1825 D DisplayPowerController: Animating brightness: target=21, rate=40
+12-17 19:31:36.264 1795 1825 V KeyguardServiceDelegate: onScreenTurnedOn()
+12-17 19:31:36.264 1795 1825 I WindowManger_keyguard: onScreenTurnedOn()
+12-17 19:31:36.264 1795 1825 D DisplayPowerController: Display ready!
+12-17 19:31:36.264 1795 1825 D DisplayPowerController: Finished business...
+12-17 19:31:36.264 2852 3328 D KeyguardService: Caller checkPermission fail
+12-17 19:31:36.264 2852 3328 D KeyguardService: KGSvcCall onScreenTurnedOn.
+12-17 19:31:36.264 2852 3328 D KeyguardViewMediator: notifyScreenTurnedOn
+12-17 19:31:36.265 2852 2852 D KeyguardViewMediator: handleNotifyScreenTurnedOn
+12-17 19:31:36.265 2852 2852 I PhoneStatusBar: onScreenTurnedOn
+12-17 19:31:36.265 2852 2852 D KGWallpaper_Magazine: getNextIndex: 0; from 5 to 5; size: 44
+12-17 19:31:36.265 2852 2852 I HwLockScreenReporter: report msg is :{picture: Deepwater-05-2.3.001-bigpicture_05_8.jpg}
+12-17 19:31:36.265 2852 2852 W HwLockScreenReporter: report result = falsereport type:162 msg:{picture: Deepwater-05-2.3.001-bigpicture_05_8.jpg, channelId: 05}
+12-17 19:31:36.265 2852 2852 I OucScreenOnCounter: Screen already turned on at: 1481974212
+12-17 19:31:36.267 5224 5283 I SendBroadcastPermission: action:android.com.huawei.bone.NOTIFY_SPORT_DATA, mPermissionType:0
+12-17 19:31:36.270 1795 16500 I HwActivityManagerService: Split enqueueing broadcast [callerApp]:ProcessRecord{580cfb2 5224:com.huawei.health:DaemonService/u0a99}
+12-17 19:31:36.271 2852 2852 I EventCenter: EventCenter Get :android.com.huawei.bone.NOTIFY_SPORT_DATA
+12-17 19:31:36.275 7741 7741 D Mms_TX_NOTIFY: Get no-perm notification callback android.intent.action.SCREEN_ON
+12-17 19:31:36.275 7741 7741 D Mms_TX_NOTIFY: ScreenState present
+12-17 19:31:36.275 5224 5283 I Step_HSNH: 20002302|upDateHealthNotification()|89|2.98|4180
+12-17 19:31:36.276 2883 2996 I HwSystemManager: ITrafficInfo:ITrafficInfo create 301updateBytes = 1769320345
+12-17 19:31:36.278 5224 5283 I Step_HSNH: 20002302|rebuild notification
+12-17 19:31:36.279 2852 2925 I EventCenter: ContentChange for slot: 1
+12-17 19:31:36.279 2852 2852 I HwBrightnessController: onChange selfChange:false uri.toString():content://settings/system/screen_auto_brightness mIsObserveAutoBrightnessChange:true
