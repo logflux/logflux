@@ -450,9 +450,13 @@ class LKEParser:
     
     def parse(self, logs):
         tok_logs = self.gen_unique_toklogs(logs)
-        pair_dists = calc_pair_dists(tok_logs)
-        
+
+        lognum = len(tok_logs)
+        if lognum==1:
+            return [tuple(tok_logs[0])]
+
         #this cc_threshold algorithm is very bad
+        pair_dists = calc_pair_dists(tok_logs)
         cc_threshold = calc_cc_threshold(pair_dists)
         self.cc_threshold = cc_threshold*self.cc_threshold_ratio
         
