@@ -7,6 +7,7 @@ import queue
 from collections import Counter
 import numpy as np
 
+sys.setrecursionlimit(100000)
 
 
 def entr(x):
@@ -206,7 +207,6 @@ def gen_connected_components(pair_dists, tok_logs, cc_threshold):
     connection_matrix = pair_dists<cc_threshold
     lognum = len(tok_logs)
     
-    sys.setrecursionlimit(lognum*lognum+1)
     
     graph = Graph(lognum)
     for i in range(lognum):
