@@ -8,14 +8,7 @@ class LogSigParser:
     def __init__(self, grp_num=30, seed=0):
         self.name = "LogSig"
         self.grp_num = grp_num
-        self.tok_logs = []
-        self.termpair_logs = []
-        
-        self.grp_sizes = []
-        self.log2grp = dict()  # each line corresponding to which group
-        self.grp_termpair_cnt = [] # each group is a dict of termpair to its cnt
-        self.logidxs_per_grp = []
-        
+
         self.seed = seed
         
     def get_parser_identifier(self):
@@ -167,14 +160,23 @@ class LogSigParser:
         for i in range(self.grp_num):
             if len(candidateSeq[i]) == 0:
                 continue
-            
+                
             sig = max(candidateSeq[i].items(), key=operator.itemgetter(1))[0]
             self.signature.append(sig)
+
             
     def parse(self, logs):
+        self.tok_logs = []
         self.load_logs(logs)
-        self.gen_termpair_logs()
         
+        self.termpair_logs = []
+        self.grp_sizes = []
+        self.log2grp = dict()  # each line corresponding to which group
+        self.grp_termpair_cnt = [] # each group is a dict of termpair to its cnt
+        self.logidxs_per_grp = []
+        
+        
+        self.gen_termpair_logs()
         self.randomize_termpair()
         
         self.logmsg_partition()
