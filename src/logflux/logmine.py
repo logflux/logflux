@@ -198,7 +198,6 @@ class LogmineParser():
         self.pattern_generator = PatternGenerator()
         self.alpha = 1.05    #attenuation coeffcient
         
-        self.clusters = []
         
     def get_parser_identifier(self):
         return {"name":self.name, "max_dist":self.max_dist, "level":self.level}
