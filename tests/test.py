@@ -206,10 +206,25 @@ dconfs_100 = [
     ('bgl.log', 100)
 ]
 
+dconfs_1 = [
+    ('android.log', 1),
+    ('bgl.log', 1)
+]
+
+dconfs_2 = [
+    ('android.log', 2),
+    ('bgl.log', 2)
+]
+
+dconfs_3 = [
+    ('android.log', 3),
+    ('bgl.log', 3)
+]
+
 import warnings
 warnings.filterwarnings("ignore")
 
-for dname, dnum in dconfs_100:
+for dname, dnum in dconfs_3:
     for pname, pparas in pconfs:
         parser = gen_parser(pname, pparas)
         logs = gen_dataset(dname, dnum)

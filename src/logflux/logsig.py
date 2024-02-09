@@ -165,6 +165,9 @@ class LogSigParser:
 
 
         for i in range(self.grp_num):
+            if len(candidateSeq[i]) == 0:
+                continue
+            
             sig = max(candidateSeq[i].items(), key=operator.itemgetter(1))[0]
             self.signature.append(sig)
             
