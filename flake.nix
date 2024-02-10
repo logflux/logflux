@@ -10,7 +10,6 @@
     devShell.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.mkShell {
       packages = [
         (nixpkgs.legacyPackages.x86_64-linux.python3.withPackages (python-pkgs: [
-          python-pkgs.pandas
           python-pkgs.numpy
           python-pkgs.scikit-learn
           python-pkgs.torch
