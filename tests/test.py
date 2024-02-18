@@ -223,9 +223,12 @@ dconfs_3 = [
 
 import warnings
 warnings.filterwarnings("ignore")
+algo_test = "logsig"
 
 for dname, dnum in dconfs_3:
     for pname, pparas in pconfs:
+        if pname!=algo_test:
+            continue
         parser = gen_parser(pname, pparas)
         logs = gen_dataset(dname, dnum)
         try:
@@ -236,4 +239,21 @@ for dname, dnum in dconfs_3:
             print(e)
             continue
 
+#this parer is shared by different dataset, it requires parser to be reentrable
+#right now fttree and shiso from amulog is not reentrable
+'''
+for pname, pparas in pconfs:
+    if pname!=algo_test:
+        continue
+    parser = gen_parser(pname, pparas)
+    for dname, dnum in dconfs_3:
+        logs = gen_dataset(dname, dnum)
+        try:
+            tpls = parser.parse(logs)
+            print(dname, dnum, pname, pparas, len(tpls))
+        except Exception as e:
+            print("running error", pname, pparas, dname, dnum)
+            print(e)
+            continue
+'''
 
