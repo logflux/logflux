@@ -1,3 +1,6 @@
+# This file adapted from the NuLog project, which is available from
+# https://github.com/nulog/nulog
+
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 from torch.utils.data import SequentialSampler, RandomSampler

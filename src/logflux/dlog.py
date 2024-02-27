@@ -1,3 +1,11 @@
+# Copyright 2024 Guineng Zheng and The University of Utah
+# All rights reserved.
+# This file is part of the logflux project, which is licensed under the
+# simplified BSD license.
+
+# Portions of this file adapted from the amulog project, which is available from
+# https://github.com/amulog/amulog
+
 #this is a recursvie algorithms
 #so it does not suit for large size for the recursive depth limitation
 

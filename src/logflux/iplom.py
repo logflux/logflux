@@ -1,3 +1,8 @@
+# Copyright 2024 Guineng Zheng and The University of Utah
+# All rights reserved.
+# This file is part of the logflux project, which is licensed under the
+# simplified BSD license.
+
 from collections import namedtuple
 #psize is its parent size
 Partition = namedtuple("Partition", "tok_logs, stage, size, psize, valid")

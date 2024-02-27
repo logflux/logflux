@@ -1,3 +1,8 @@
+# Copyright 2024 Guineng Zheng and The University of Utah
+# All rights reserved.
+# This file is part of the logflux project, which is licensed under the
+# simplified BSD license.
+
 class MessageScorer():
     def __init__(self, k=1.0):
         self.k = k

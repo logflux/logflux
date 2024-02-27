@@ -1,3 +1,6 @@
+# This file adapted from the amulog project, which is available from
+# https://github.com/amulog/amulog
+
 from collections import defaultdict
 
 class TemplateTable:
