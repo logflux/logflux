@@ -1,3 +1,6 @@
+# This file adapted from the amulog project, which is available from
+# https://github.com/amulog/amulog
+
 import numpy as np
 from collections import defaultdict
 

@@ -1,3 +1,8 @@
+# Copyright 2024 Guineng Zheng and The University of Utah
+# All rights reserved.
+# This file is part of the logflux project, which is licensed under the
+# simplified BSD license.
+
 from copy import deepcopy
 import random
 
