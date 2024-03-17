@@ -1,3 +1,8 @@
+# Copyright 2024 Guineng Zheng and The University of Utah
+# All rights reserved.
+# This file is part of the logflux project, which is licensed under the
+# simplified BSD license.
+
 def gen_freq_words(log_words, freq_bar):
     #gen word equal or greater than freq_bar
     word_freq = dict()
