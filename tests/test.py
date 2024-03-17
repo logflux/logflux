@@ -16,6 +16,11 @@ from logflux import SLCTParser
 from logflux import SpellParser
 from logflux import VAParser
 
+from logflux.utils import gen_tpl2logs
+from logflux.utils import gen_log2tpls
+from logflux.utils import gen_missed_logs
+from logflux.utils import gen_missed_tpls
+
 def gen_parser(pname, pparas):
     if pname == "ael":
         merge_pct=pparas["merge_pct"]
@@ -225,15 +230,28 @@ import warnings
 warnings.filterwarnings("ignore")
 algo_test = "logsig"
 
-for dname, dnum in dconfs_3:
+for dname, dnum in dconfs_30:
     for pname, pparas in pconfs:
-        if pname!=algo_test:
-            continue
+        #if pname!=algo_test:
+        #    continue
         parser = gen_parser(pname, pparas)
         logs = gen_dataset(dname, dnum)
+        tok_logs = [tuple(str_log.split()) for str_log in logs]
+
         try:
             tpls = parser.parse(logs)
-            print(dname, dnum, pname, pparas, len(tpls))
+            print(dname, dnum, pname, pparas, len(tok_logs), len(tpls))
+        
+            batch_size = 16
+            use_gpu = True
+            tpl2logs = gen_tpl2logs(tpls, tok_logs, batch_size, use_gpu)
+            log2tpls = gen_log2tpls(tok_logs, tpls, batch_size, use_gpu)
+            print("tpl2logs num:", len(tpl2logs), "log2tpls num:", len(log2tpls))
+        
+            missed_logs = gen_missed_logs(tpls, tok_logs, batch_size, use_gpu)
+            missed_tpls = gen_missed_tpls(tpls, tok_logs, batch_size, use_gpu)
+            print("missed logs num:", len(missed_logs), "missed tpls num:", len(missed_tpls))
+
         except Exception as e:
             print("running error", pname, pparas, dname, dnum)
             print(e)
