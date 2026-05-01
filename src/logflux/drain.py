@@ -345,7 +345,7 @@ class DrainParser:
             cluster = self.fast_match(all_ids, content_tokens, required_sim_th, include_params=True)
             return cluster
         
-        if full_search == "always":
+        if full_search_strategy == "always":
             return full_search()
         
         match_cluster = self.tree_search(self.root_node, content_tokens, required_sim_th, include_params=True)
